@@ -1,7 +1,11 @@
 
+//TODO: cirar u event page que vai ouvir e logar quando aparecer o html de fim de vídeo 
+
+
 //iframe do youtube 
 //obter o elemento de fim de vídeo do yotuube
-    let endvideo =  document.getElementsByClassName("html5-endscreen")[0]
+let endvideo =  document.getElementsByClassName("html5-endscreen")[0]
+
 
 //iframe principal -> clica no botão do próximo vídeo
 document.getElementsByClassName("button-container next false")[0].click()
