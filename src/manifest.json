@@ -32,12 +32,6 @@
             "js":["End_yt_listener.js"],
             "run_at": "document_idle",
             "all_frames": true   
-        },
-        {
-            "matches": ["https://app.nutror.com/*"],
-            "js":["End_yt_Handler.js"],
-            "run_at": "document_idle",
-            "all_frames": true   
         }
     ]
     

@@ -24,7 +24,7 @@ function ListenForVideoEnding(endVideoElement) {
         let isVisible = getComputedStyle(endVideoElement).display == "block"
         if (isVisible) {                  
                 ArmazenarVelocidade()
-                chrome.runtime.sendMessage({greeting: "hello"}, function(response) {});
+                chrome.runtime.sendMessage({command: "proximo"}, function(response) {});
             }
     } 
 }

@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener(
             });
         });
       
-      if (request.greeting == "hello")
-        sendResponse({farewell: "goodbye"});
+    //   if (request.greeting == "hello")
+        sendResponse();
     }
   );
