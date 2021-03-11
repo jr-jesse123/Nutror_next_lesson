@@ -7,31 +7,24 @@ if (!velocidadeAnterior) {
 
 
 setInterval(() => {
-    //console.log("iniciando pesquisa")    
     ListenForVideoEnding(endVideoElement)
 }, 500);
 
 function ListenForVideoEnding(endVideoElement) {
- 
-
+   
     if (!endVideoElement) {
          endVideoElement =  document.getElementsByClassName("html5-endscreen")[0]
     }
-//se o elemento foi encontrado e 
+   
     if (endVideoElement) {
-   //     console.log("elemento de endVideo encontrado")
         if (!velocidadeAjustada) {
             AjustarVelocidade(velocidadeAnterior) 
-            velocidadeAjustada = !velocidadeAjustada
         }
+        
         let isVisible = getComputedStyle(endVideoElement).display == "block"
-        if (isVisible) {
-     //           console.log("elemento endvideo visível")
-                  
+        if (isVisible) {                  
                 ArmazenarVelocidade()
-                chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-                 //   console.log(response);
-                  });
+                chrome.runtime.sendMessage({greeting: "hello"}, function(response) {});
             }
     } 
 }
@@ -46,6 +39,8 @@ function AjustarVelocidade(indice){
     let opcoesVelçocidades = velocidadesNodes.singleNodeValue.getElementsByClassName("ytp-menuitem")
     opcoesVelçocidades[indice].click()
     engrenagemNode.singleNodeValue.click()
+    
+    velocidadeAjustada = !velocidadeAjustada
 }
 
 function ArmazenarVelocidade() {
