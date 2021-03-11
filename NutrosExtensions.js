@@ -13,16 +13,17 @@ document.getElementsByClassName("button-container next false")[0].click()
 let actualSpeed = document.evaluate("//*[@id='ytp-id-17']/div/div/div[2]/div[3]",document,null, XPathResult.FIRST_ORDERED_NODE_TYPE)
                                                                                                             .singleNodeValue.textContent
 
-
-//seleciona a velocidade de reprodução                                                                                                            
-let engrenagemNode = document.evaluate("//*[@id='movie_player']/div[27]/div[2]/div[2]/button[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
+function AjustarVelocidade(indice){
+    let engrenagemNode = document.evaluate("//*[@id='movie_player']/div[27]/div[2]/div[2]/button[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
     engrenagemNode.singleNodeValue.click()
-let velocidadeNode = document.evaluate("//*[@id='ytp-id-17']/div/div/div[2]/div[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
+    let velocidadeNode = document.evaluate("//*[@id='ytp-id-17']/div/div/div[2]/div[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
     velocidadeNode.singleNodeValue.click()
 
-let velocidadesNodes = document.evaluate("//*[@id='ytp-id-17']/div/div[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
-let opcoesVelçocidades = velocidadesNodes.singleNodeValue.getElementsByClassName("ytp-menuitem")
-opcoesVelçocidades[5].click()
+    let velocidadesNodes = document.evaluate("//*[@id='ytp-id-17']/div/div[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
+    let opcoesVelçocidades = velocidadesNodes.singleNodeValue.getElementsByClassName("ytp-menuitem")
+    opcoesVelçocidades[indice].click()
+    engrenagemNode.singleNodeValue.click()
+}
 
 
 
