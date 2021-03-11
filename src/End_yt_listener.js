@@ -15,11 +15,10 @@ function ListenForVideoEnding(endVideoElement) {
     if (endVideoElement) {
         console.log("elemento de endVideo encontrado")
         
-        let isVisible = getComputedStyle(endVideoElement).display
+        let isVisible = getComputedStyle(endVideoElement).display == "block"
         if (isVisible) {
                 console.log("elemento endvideo visível")
                 chrome.runtime.sendMessage("LessonFinishedEvent");
-
             }
     } 
 }

@@ -4,7 +4,7 @@
 
 //iframe do youtube 
 //obter o elemento de fim de vídeo do yotuube
-let endvideo =  document.getElementsByClassName("html5-endscreen")[0]
+let endVideoElement =  document.getElementsByClassName("html5-endscreen")[0]
 
 
 //iframe principal -> clica no botão do próximo vídeo
