@@ -1,5 +1,4 @@
 
-//TODO: cirar u event page que vai ouvir e logar quando aparecer o html de fim de vídeo 
 
 
 //iframe do youtube 
@@ -24,5 +23,16 @@ let velocidadeNode = document.evaluate("//*[@id='ytp-id-17']/div/div/div[2]/div[
 let velocidadesNodes = document.evaluate("//*[@id='ytp-id-17']/div/div[2]", document, null    , XPathResult.FIRST_ORDERED_NODE_TYPE)
 let opcoesVelçocidades = velocidadesNodes.singleNodeValue.getElementsByClassName("ytp-menuitem")
 opcoesVelçocidades[5].click()
+
+
+
+//disparar autoplay
+function DispararPlayer() {
+    let playerElement = document.getElementsByTagName("iframe")[0]
+    let allows = playerElement.getAttribute("allow")
+    playerElement.setAttribute("allow", allows + ";autoplay") 
+    let src = playerElement.getAttribute("src")
+    playerElement.setAttribute("src", src + "&autoplay=1")        
+}
 
 
