@@ -6,18 +6,39 @@
     "browser_action": {
         "default_popup": "./popout/popout.html"
     },
+
+
+    "permissions": [
+        "activeTab",
+         "tabs",
+          "notifications",
+          "http://www.blogger.com/",
+          "http://*.youtube.com/*",
+          "https://app.nutror.com/*",
+          "*://*/*",
+          "<all_urls>"
+                ],
+
     "background": {
         "scripts": ["eventPage.js"],
         "persistent": false
     },
 
+
+    
     "content_scripts":[
         {
             "matches": ["https://www.youtube.com/*"],
             "js":["End_yt_listener.js"],
             "run_at": "document_idle",
             "all_frames": true   
+        },
+        {
+            "matches": ["https://app.nutror.com/*"],
+            "js":["End_yt_Handler.js"],
+            "run_at": "document_idle",
+            "all_frames": true   
         }
-    ],
-    "permissions": ["activeTab"]
+    ]
+    
 }
