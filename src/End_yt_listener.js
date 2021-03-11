@@ -2,7 +2,7 @@ let endVideoElement
  
 
 setInterval(() => {
-    console.log("iniciando pesquisa")    
+    //console.log("iniciando pesquisa")    
     ListenForVideoEnding(endVideoElement)
 }, 500);
 
@@ -13,14 +13,14 @@ function ListenForVideoEnding(endVideoElement) {
     }
 //se o elemento foi encontrado e 
     if (endVideoElement) {
-        console.log("elemento de endVideo encontrado")
+   //     console.log("elemento de endVideo encontrado")
         
         let isVisible = getComputedStyle(endVideoElement).display == "block"
         if (isVisible) {
-                console.log("elemento endvideo visível")
+     //           console.log("elemento endvideo visível")
                   
                 chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-                    console.log(response);
+                 //   console.log(response);
                   });
             }
     } 

@@ -6,8 +6,6 @@ function DispararPlayer() {
     playerElement.setAttribute("src", src + "&autoplay=1")        
 }
 
-
-
 document.getElementsByClassName("button-container next false")[0].click()
 
 setTimeout(() => {  DispararPlayer(); }, 1500); //TODO: corrigir esta espera para que reaja ao estado do eleemnto ao in´ves de um segundo fechado 
