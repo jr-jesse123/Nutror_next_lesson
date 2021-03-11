@@ -1,6 +1,6 @@
 {
-    "name": "Hello World",
-    "description":  "Base Level Extension",
+    "name": "Rerpodutor Automático Heroway",
+    "description":  "Permite reproduzir as próximas aulas automaticamente na plataforma nutror",
     "version": "1.0",
     "manifest_version": 2,
     "browser_action": {
@@ -20,7 +20,7 @@
                 ],
 
     "background": {
-        "scripts": ["eventPage.js"],
+        "scripts": ["End_yt_handler.js"],
         "persistent": false
     },
 
