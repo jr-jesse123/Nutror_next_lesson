@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+  }
+/*   
+  html, body {
+    height: 100vh;
+  }
+   */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .label{
+      font-size: small;
+      margin: 15px;
+  }
+
+  input {
+    -webkit-appearance: none;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    /* background-color: rgb(244, 189, 33); */
+    background-color: rgb(255, 81, 0);
+    border-radius: 50px;
+    outline: none;
+  }
+  
+  input:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: navy;
+    
+    border-radius: 100px;
+  }
+  
+  input:checked {
+    /* background-color: red; */
+    background-color: rgb(90, 197, 3);
+  
+  }
+  
+  input:checked:before {
+    transform: translate(100%);
+  }
