@@ -3,8 +3,8 @@ toogle.addEventListener("click", ativar_desativar)
 
 function ativar_desativar(){
     
-
-    chrome.tabs.executeScript({code: "console.log(document.getRootNode())"});
+    //TODO: conseguir desativar a extensão
+    // chrome.tabs.executeScript({code: "console.log(document.getRootNode())"});
     chrome.tabs.executeScript({code: "ativar_desativar_extensao()"});
 
 }

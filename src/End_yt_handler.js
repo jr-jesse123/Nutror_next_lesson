@@ -1,7 +1,7 @@
 
-function ArmazenarVelocidade(){
-    console.log("ar");
-}
+// function ArmazenarVelocidade(){
+//     console.log("ar");
+// }
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(
                 activeTabs.map(function (tab) {
 
                     if (localStorage.getItem("nutrorState") != "unActive") {
-                        chrome.tabs.executeScript(tab.id, { file: 'content_script.js', allFrames: false });
+                        chrome.tabs.executeScript(tab.id, { file: 'playerManager.js', allFrames: false });
                     }
                 });
             });
