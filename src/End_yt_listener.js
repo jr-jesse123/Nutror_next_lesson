@@ -1,3 +1,10 @@
+var extensaoAtiva = true;
+
+function ativar_desativar_extensao() {
+    extensaoAtiva = !extensaoAtiva
+    console.log(extensaoAtiva)
+}
+
 let endVideoElement
 let velocidadeAjustada = false
 let velocidadeAnterior =  localStorage.getItem('Velocidade') * 1
@@ -7,8 +14,11 @@ if (!velocidadeAnterior) {
 
 
 setInterval(() => {
-    ListenForVideoEnding(endVideoElement)
-}, 500);
+    console.log(extensaoAtiva)
+    if (extensaoAtiva) {
+        ListenForVideoEnding(endVideoElement)
+    }
+}, 1000);
 
 function ListenForVideoEnding(endVideoElement) {
    

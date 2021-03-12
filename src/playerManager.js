@@ -1,9 +1,3 @@
-function ArmazenarVelocidade(){
-    console.log("ar");
-}
-
-
-
 
 document.getElementsByClassName("button-container next false")[0].click()
 
