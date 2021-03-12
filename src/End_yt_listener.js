@@ -1,9 +1,3 @@
-var extensaoAtiva = true;
-
-function ativar_desativar_extensao() {
-    extensaoAtiva = !extensaoAtiva
-    console.log(extensaoAtiva)
-}
 
 let endVideoElement
 let velocidadeAjustada = false
@@ -14,6 +8,9 @@ if (!velocidadeAnterior) {
 
 
 setInterval(() => {
+    let extensaoAtivastr = localStorage.getItem("nutrorState") 
+
+    let extensaoAtiva = extensaoAtivastr != "unActive"
     console.log(extensaoAtiva)
     if (extensaoAtiva) {
         ListenForVideoEnding(endVideoElement)

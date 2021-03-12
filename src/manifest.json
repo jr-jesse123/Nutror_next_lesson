@@ -32,10 +32,14 @@
             "js":["End_yt_listener.js"],
             "run_at": "document_idle",
             "all_frames": true   
+        },
+        
+        {
+            "matches": ["<all_urls>"],
+            "js":["extensionGate.js"],
+            "run_at": "document_idle",
+            "all_frames": false   
         }
-        //TODO: a comunicação aqui acontece somente para o top lvel frame através do tabs.execute script....
-        //é preciso encontrar uma fora de controlar o fluxo por lá.
-        //precisamos encontrar uma forma de 
     ]
     
 }
